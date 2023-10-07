@@ -1,13 +1,13 @@
-import React from 'react';
-import './BookTable.css';
+import React from "react";
+import "./BookTable.css";
 
 // The BookList component is responsible for rendering the array of book objects
 // stored in the App component's state.
 // How can you give BookTable access to that books array?
 
-const BookTable = () => {
-	const bookItems = books.map((book) => <div>{book}</div>);
-
+const BookTable = ({ books }) => {
+	const bookItems = books.map((book) => <div>{books.title}</div>);
+	console.log(books);
 	return (
 		<div>
 			<h2>Book Table</h2>
