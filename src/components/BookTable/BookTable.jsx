@@ -1,5 +1,6 @@
 import React from "react";
 import "./BookTable.css";
+import BookRow from "../BookRow/BookRow";
 
 // The BookList component is responsible for rendering the array of book objects
 // stored in the App component's state.
@@ -7,9 +8,9 @@ import "./BookTable.css";
 
 const BookTable = ({ books }) => {
 	const bookItems = books.map((book) => (
-		<div key={book.id}>{book.title}</div>
+		<BookRow key={book.id} book={book} />
 	));
-	//console.log(books);
+	console.log(`bookitem: + ${bookItems.books}`);
 	return (
 		<div>
 			<h2>Book Table</h2>

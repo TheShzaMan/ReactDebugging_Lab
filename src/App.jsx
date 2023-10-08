@@ -9,7 +9,7 @@ import BookTable from "./components/BookTable/BookTable";
 <script src="http://localhost:8097"></script>;
 const App = () => {
 	const [books, setBooks] = useState([]);
-
+	console.log(books);
 	useEffect(() => {
 		setBooks(generateBookData()); // **DO NOT EDIT THIS LINE!**
 	}, []);
